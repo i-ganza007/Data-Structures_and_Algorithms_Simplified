@@ -1,7 +1,7 @@
 # A Singly Linked List is a data structure that relies on Nodes and their properties. 
 # The first node in a Singly Linked List is called a head, and the last one's Next value is None since it holds no memory address. 
 
-Class SLL:
+class SLL:
     def __init__(self):
         self.head = None
 
