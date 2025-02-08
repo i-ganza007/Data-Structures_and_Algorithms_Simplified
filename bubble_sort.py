@@ -2,19 +2,16 @@
 # So we're going to go through it here 
 # This algorithm uses boolean values to track the sorted values and if the sorted boolean value doesn't change , we break out of the loop 
 
-def bubble_sort(list_a):
-    for i in range(len(list_a)):
-        tracker = False
-        # We created this to help track if they're any changes . If it doesn't make any sense , don't worry because it'll make sense later in the program ]
-        for j in range(len(list_a)-i-1):
-            # So what this range(len(list_a)-i-1) does , is shorten the length of the portion that needs to be sorted .
-            # After the first iteration , the biggest value becomes the last value
-            if list_a[j] > list_a[j+1]:
-                list_a[j],list_a[j+1] = list_a[j+1],list_a[j]
-                tracker = True
-            if not tracker:
-                break
-    return list_a 
+def bubblesort(arr):
+    length = len(arr) -1
+    sort = False
+    
+    while not sort:
+        sort = True
+        for i in range(length):
+            if arr[i] < arr[i+1]:
+                sort = False
+                arr[i],arr[i+1] = arr[i+1],arr[i]
 
     """
     e.g [2,1,4,8,7,10]
