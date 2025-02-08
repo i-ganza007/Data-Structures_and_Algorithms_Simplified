@@ -1,0 +1,15 @@
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = sequence.pop()
+    
+    lower = []
+    upper = []
+        
+    for i in range(len(arr)-1):
+        if arr[i] < pivot:
+            lower.append(arr[i])
+        else:
+            upper.append(arr[i])
+    return quicksort( lower) + pivot + quicksort(upper)
