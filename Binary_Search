@@ -1,0 +1,19 @@
+# Binary search 
+nums = [4,9,11,17,21,25,29,32,38]
+# Divide the list by the middle , and if the sorted list on the left is less than the number being looked for then its ruled out . So we start from the middle .
+
+def Binary(number,iterable):
+    left = 0
+    right = len(iterable) - 1
+    
+    while right >= left:
+        middle = (left + right) // 2
+        if iterable[middle] > number:
+            right = middle - 1
+        elif iterable[middle] < number:
+            left = middle - 1
+        else : 
+            return middle
+    return 'No here'
+
+print(Binary(19,[4,9,11,17,21,25,29,32,38]))
